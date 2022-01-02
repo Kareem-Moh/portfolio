@@ -1,5 +1,5 @@
-# portfolio
-Personal Website
+# My Portfolio
+This project is my Personal Website. Using a MERN stack
 
 # Setup
 1. In the `frontend` folder, run `npm run start`
