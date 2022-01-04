@@ -8,8 +8,10 @@ const app = express()
 const apiPort = 3000
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors())
 app.use(bodyParser.json())
+app.use(cors())
+
+const whitelist = ['localhost:9000']
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 

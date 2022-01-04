@@ -103,14 +103,14 @@ getCommentById = async (req, res) => {
 }
 
 getComments = async (req, res) => {
-    await Movie.find({}, (err, comments) => {
+    await Comment.find({}, (err, comments) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }
         if (!comments.length) {
             return res
                 .status(404)
-                .json({ success: false, error: `Movie not found` })
+                .json({ success: false, error: `Comments not found` })
         }
         return res.status(200).json({ success: true, data: comments })
     }).catch(err => console.log(err))
